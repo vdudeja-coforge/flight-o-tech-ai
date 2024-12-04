@@ -1,5 +1,5 @@
 import React from 'react';
-import './AirlineComparison.css';
+import '../styles/AirlineComparison.css';
 import planeIcon from '../assets/airplane_1308-28461.png';
 
 const AirlineComparison = () => {
