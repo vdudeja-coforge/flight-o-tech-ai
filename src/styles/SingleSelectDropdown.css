@@ -1,6 +1,6 @@
-.multi-select-dropdown {
+.dropdown {
     position: relative;
-    width: 300px;
+    width: 250px;
     font-family: Arial, sans-serif;
     font-size: 14px;
   }
@@ -16,14 +16,13 @@
     cursor: pointer;
   }
   
-  .dropdown-placeholder {
+  .dropdown-selected {
     color: #333;
-    flex: 1;
   }
   
   .dropdown-arrow {
-    font-size: 10px;
-    color: #333;
+    font-size: 12px;
+    color: #666;
   }
   
   .dropdown-options {
@@ -36,8 +35,9 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
-    max-height: 200px;
+    max-height: 150px;
     overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .dropdown-option {
@@ -53,35 +53,14 @@
     background-color: #f0f0f0;
   }
   
-  .dropdown-option.selected {
+  .dropdown-option .dropdown-tick {
+    margin-right: 8px;
+    color: #007bff;
     font-weight: bold;
-  }
-  
-  .checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    width: 20px;
-  }
-  
-  .checkbox-container input {
-    display: none;
-  }
-  
-  .checkmark {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
-    text-align: center;
-    font-size: 12px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 3px;
     visibility: hidden;
   }
   
-  .checkbox-container input:checked + .checkmark {
+  .dropdown-option[aria-selected="true"] .dropdown-tick {
     visibility: visible;
   }
   

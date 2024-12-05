@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../styles/MultiSelectDropdown.css";
+import "../styles/SingleSelectDropdown.css";
 
-const MultiSelectDropdown = ({ options, onSelectionChange }) => {
+const Dropdown = ({ options, onSelectionChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOption, setSelectedOption] = useState(null);
   const [highlightedIndex, setHighlightedIndex] = useState(0);
 
   const dropdownRef = useRef(null);
@@ -22,13 +22,9 @@ const MultiSelectDropdown = ({ options, onSelectionChange }) => {
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   const handleSelectOption = (option) => {
-    const isSelected = selectedOptions.includes(option);
-    const updatedSelection = isSelected
-      ? selectedOptions.filter((o) => o !== option)
-      : [...selectedOptions, option];
-
-    setSelectedOptions(updatedSelection);
-    onSelectionChange(updatedSelection);
+    setSelectedOption(option);
+    onSelectionChange(option);
+    setIsOpen(false);
   };
 
   const handleKeyDown = (event) => {
@@ -50,7 +46,6 @@ const MultiSelectDropdown = ({ options, onSelectionChange }) => {
         event.preventDefault();
         break;
       case "Enter":
-      case " ":
         handleSelectOption(options[highlightedIndex]);
         event.preventDefault();
         break;
@@ -67,7 +62,7 @@ const MultiSelectDropdown = ({ options, onSelectionChange }) => {
 
   return (
     <div
-      className="multi-select-dropdown"
+      className="dropdown"
       ref={dropdownRef}
       tabIndex={0}
       onKeyDown={handleKeyDown}
@@ -76,41 +71,32 @@ const MultiSelectDropdown = ({ options, onSelectionChange }) => {
     >
       {/* Dropdown Header */}
       <div className="dropdown-header" onClick={toggleDropdown}>
-        <span className="dropdown-placeholder">
-          {selectedOptions.length > 0
-            ? selectedOptions.join(", ")
-            : "Select options"}
+        <span className="dropdown-selected">
+          {selectedOption || "Select an option"}
         </span>
-        <div className="dropdown-arrow">{isOpen ? "▲" : "▼"}</div>
+        <span className="dropdown-arrow">{isOpen ? "▲" : "▼"}</span>
       </div>
 
       {/* Dropdown Options */}
       {isOpen && (
         <ul className="dropdown-options" role="listbox">
           {options.map((option, index) => {
-            const isSelected = selectedOptions.includes(option);
             const isHighlighted = index === highlightedIndex;
+            const isSelected = selectedOption === option;
 
             return (
               <li
                 key={option}
                 className={`dropdown-option ${
-                  isSelected ? "selected" : ""
-                } ${isHighlighted ? "highlighted" : ""}`}
+                  isHighlighted ? "highlighted" : ""
+                }`}
                 onClick={() => handleSelectOption(option)}
                 onMouseEnter={() => setHighlightedIndex(index)}
                 role="option"
                 aria-selected={isSelected}
               >
-                <span className="checkbox-container">
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    readOnly
-                  />
-                  <span className="checkmark">
-                    {isSelected && "✔"}
-                  </span>
+                <span className="dropdown-tick">
+                  {isSelected && "✔"}
                 </span>
                 {option}
               </li>
@@ -122,4 +108,4 @@ const MultiSelectDropdown = ({ options, onSelectionChange }) => {
   );
 };
 
-export default MultiSelectDropdown;
+export default Dropdown;
