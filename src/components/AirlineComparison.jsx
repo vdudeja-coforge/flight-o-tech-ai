@@ -2,8 +2,12 @@ import React from 'react';
 import '../styles/AirlineComparison.css';
 import planeIcon from '../assets/airplane_1308-28461.png';
 import MultiSelectDropdown from './MultiSelectDropdown';
+import SingleSelectDropdown from './SingleSelectDropdown';
 
 const AirlineComparison = () => {
+
+    const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
+
 
     const airlineOptions = [
         { id: 1, label: "BRITISH AIRWAYS" },
@@ -63,10 +67,17 @@ const AirlineComparison = () => {
         </div>
       </div> */}
     <h1>Dynamic Multi-Select Dropdown</h1>
+
+
     <div style={{ padding: "20px", display: "flex", justifyContent:"space-around" }}>
-        <MultiSelectDropdown options={airlineOptions} onSelectionChange={handleSelectionChange} />
-        <MultiSelectDropdown options={reviewPlatforms} onSelectionChange={handleSelectionChange} />
+        <MultiSelectDropdown options={options} onSelectionChange={handleSelectionChange} />
+        
     </div>  
+
+    <div style={{ padding: "20px" }}>
+      <h1>Single Select Dynamic Dropdown</h1>
+      <SingleSelectDropdown options={options} onSelectionChange={handleSelectionChange} />
+    </div>
 
       <div className="table-section">
         <table>
