@@ -2,35 +2,13 @@ import React from 'react';
 import '../styles/AirlineComparison.css';
 import planeIcon from '../assets/airplane_1308-28461.png';
 import MultiSelectDropdown from './MultiSelectDropdown';
+import SingleSelectDropdown from './SingleSelectDropdown';
 
-const AirlineComparison = () => {
-
-    const airlineOptions = [
-        { id: 1, label: "BRITISH AIRWAYS" },
-        { id: 2, label: "EASYJET UK LTD" },
-        { id: 3, label: "WIZZ AIR UK LTD" },
-        { id: 4, label: "TUI AIRWAYS LTD" },
-        { id: 5, label: "VIRGIN ATLANTIC AIRWAYS LTD" },
-    ];
-
-    const reviewPlatforms = [
-        { id: 1, label: "Trustpilot" },
-        { id: 2, label: "Tripadvisor" },
-        { id: 3, label: "HomeViews" },
-        { id: 4, label: "Google Reviews" },
-    ];
-
-    
-    const handleSelectionChange = (selected) => {
-    console.log("Selected options:", selected);
-    };
+const AirlineComparison = (props) => {
 
   return (
     <div className="airline-comparison">
-      <div className="header">
-        <h1>Airline Compares Reviews</h1>
-        <p>Compare airlines based on ratings, pricing, and user reviews to make informed travel choices.</p>
-      </div>
+      
 {/*       <div className="dashboard">
         <div className="ratings-chart">
           <div className="chart-title">
@@ -62,12 +40,6 @@ const AirlineComparison = () => {
           </div>
         </div>
       </div> */}
-    <h1>Dynamic Multi-Select Dropdown</h1>
-    <div style={{ padding: "20px", display: "flex", justifyContent:"space-around" }}>
-        <MultiSelectDropdown options={airlineOptions} onSelectionChange={handleSelectionChange} />
-        <MultiSelectDropdown options={reviewPlatforms} onSelectionChange={handleSelectionChange} />
-    </div>  
-
       <div className="table-section">
         <table>
           <thead>
