@@ -3,7 +3,7 @@ import "../styles/SingleSelectDropdown.css";
 
 const Dropdown = ({ options, onSelectionChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(options ? options[0] : null);
   const [highlightedIndex, setHighlightedIndex] = useState(0);
 
   const dropdownRef = useRef(null);
