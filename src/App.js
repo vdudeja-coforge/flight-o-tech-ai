@@ -10,7 +10,7 @@ import { airlinesOptions , reviewPlatformsOptions , viewOptions} from './utils/d
 
 function App() {
 
-  const [selectedView, setSelectedView] = useState("TABLE")
+  const [selectedView, setSelectedView] = useState("TABLE VIEW")
   const [selectedAirlines, setSelectedAirlines] = useState([]);
   const [selectedReviewPlatforms, setSelectedReviewPlatforms] = useState([]);
 
@@ -52,7 +52,7 @@ function App() {
 
         {/* Dropdown to select one or more review platforms */}
         <div style={{display: "flex", justifyContent:"space-around" }}>
-            <ReviewPlatformsDropdown options={convertOptionsToUppercase(reviewPlatformsOptions)} onSelectionChange={getSelectedReviewPlatformsFromDropdown} />
+            <ViewDropdown options={convertOptionsToUppercase(reviewPlatformsOptions)} onSelectionChange={getSelectedReviewPlatformsFromDropdown} />
         </div> 
 
         {/* Dropdown to toggle the table or chart view */}  
@@ -62,7 +62,7 @@ function App() {
 
       </div>
 
-      { selectedView === "TABLE" ? 
+      { selectedView === "TABLE VIEW" ? 
           <AirlineComparison 
             selectedAirlines={selectedAirlines}
             selectedReviewPlatforms = {selectedReviewPlatforms}

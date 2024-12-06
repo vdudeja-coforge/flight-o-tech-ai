@@ -2,4 +2,4 @@ export const airlinesOptions =  [ "BRITISH AIRWAYS" , "EASYJET UK LTD" , "WIZZ A
 
 export const reviewPlatformsOptions =  [ "Trustpilot" , "GOOGLE REVIEWS" , "Tripadvisor" , "FACEBOOK" , "HomeViews" ];
 
-export const viewOptions =  [ "Table" , "Chart" ];
+export const viewOptions =  [ "Table View" , "Chart View" ];
