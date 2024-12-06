@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/flight-o-tech-ai/static/css/main.628db12b.css",
-    "main.js": "/flight-o-tech-ai/static/js/main.fd363f2e.js",
+    "main.js": "/flight-o-tech-ai/static/js/main.67c8dc16.js",
     "static/js/453.2ec17513.chunk.js": "/flight-o-tech-ai/static/js/453.2ec17513.chunk.js",
     "static/media/airplane_1308-28461.png": "/flight-o-tech-ai/static/media/airplane_1308-28461.4baf6330a68313e9ba87.png",
     "index.html": "/flight-o-tech-ai/index.html",
     "main.628db12b.css.map": "/flight-o-tech-ai/static/css/main.628db12b.css.map",
-    "main.fd363f2e.js.map": "/flight-o-tech-ai/static/js/main.fd363f2e.js.map",
+    "main.67c8dc16.js.map": "/flight-o-tech-ai/static/js/main.67c8dc16.js.map",
     "453.2ec17513.chunk.js.map": "/flight-o-tech-ai/static/js/453.2ec17513.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.628db12b.css",
-    "static/js/main.fd363f2e.js"
+    "static/js/main.67c8dc16.js"
   ]
 }
