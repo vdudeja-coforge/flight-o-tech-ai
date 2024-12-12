@@ -1,0 +1,66 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #020e36;  /* Dark background for footer */
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-links {
+    margin-top: 6px;
+}
+
+.footer-links a {
+    color: #008080;  /* TripAdvisor green color */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    footer p {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 5px 0;
+    }
+}

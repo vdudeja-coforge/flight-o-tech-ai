@@ -1,0 +1,4 @@
+
+.icon-star-empty:before { content: '\e801'; } /* '' */
+.icon-star-1:before { content: '\e802'; } /* '' */
+.icon-star-half-alt:before { content: '\f123'; } /* '' */

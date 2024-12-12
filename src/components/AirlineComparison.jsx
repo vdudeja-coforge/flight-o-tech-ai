@@ -4,9 +4,62 @@ import planeIcon from '../assets/airplane_1308-28461.png';
 import MultiSelectDropdown from './MultiSelectDropdown';
 import SingleSelectDropdown from './SingleSelectDropdown';
 import { reviewsCategory } from '../utils/reviewsData';
-import { airlineReviewsData } from '../utils/reviewsData';
+import fullStarIcon from '../assets/star-full-icon.svg';
+import halfStarIcon from '../assets/star-half-icon.svg';
+import emptyStarIcon from '../assets/star-empty-icon.svg';
+import fullstar from '../assets/star-16.png';
 
-const AirlineComparison = ({selectedAirlines,  selectedReviewPlatforms}) => {
+const AirlineComparison = ({selectedAirlines,  selectedReviewPlatform, finalReviewData}) => {
+
+  // Function to convert a rating number into stars
+function generateStarRating(rating, index) {
+  // Ensure the rating is within the 0-5 range
+  rating = Math.max(0, Math.min(5, rating));
+
+  let fullStars = Math.floor(rating); // Full stars are the integer part
+  let halfStarCount = rating % 1 >= 0.5 ? 1 : 0; // Half star if there's a .5
+  let emptyStars = 5 - fullStars - halfStarCount; // Remaining stars are empty
+ 
+  // Create a variable to store the star HTML
+  let starRating = [];
+
+  let starColor ;
+  
+  if(selectedReviewPlatform === "airlinequality" || selectedReviewPlatform === "AIRLINEQUALITY"){
+    starColor = "airlinequality-star"
+  }
+
+  if(selectedReviewPlatform === "trustpilot" || selectedReviewPlatform === "TRUSTPILOT"){
+    starColor = "trustpilot-star"
+  }
+
+  if(selectedReviewPlatform === "tripadvisor" || selectedReviewPlatform === "TRIPADVISOR"){
+    starColor = "tripadvisor-star"
+  }
+
+  // Add full stars
+  for (let i = 0; i < fullStars; i++) {
+    //starRating.push(<img key={`full-${i}`} src={fullStarIcon} alt="Full Star" className='rating-stars tripadvisor-star' />);
+    starRating.push(<i className={`icon-star-1 rating-stars ${starColor}`}></i>)
+   
+  }
+
+  // Add half star
+  if (halfStarCount) {
+    //starRating.push(<img key="half" src={halfStarIcon} alt="Half Star" className='rating-stars tripadvisor-star'/>);
+    starRating.push(<i className={`icon-star-half-alt rating-stars ${starColor}`}></i>)
+  }
+
+  // Add empty stars
+  for (let i = 0; i < emptyStars; i++) {
+    //starRating.push(<img key={`empty-${i}`} src={emptyStarIcon} alt="Empty Star" className='rating-stars tripadvisor-star'/>);
+    starRating.push(<i className={`icon-star-empty rating-stars ${starColor}`}></i>)
+  }
+
+  return starRating;
+
+}
+
 
   return (
     <div className="airline-comparison">
@@ -56,16 +109,17 @@ const AirlineComparison = ({selectedAirlines,  selectedReviewPlatforms}) => {
               {
                 // Displaying the data of selected airlines
                 (selectedAirlines && selectedAirlines.length > 0) ?
-                    (airlineReviewsData.map((eachData) =>{
+                    (finalReviewData?.reviews.map((eachData, index) =>{
                         if(selectedAirlines && selectedAirlines.length > 0){
-                            if(selectedAirlines.includes(eachData.airline)){
+                            if(selectedAirlines.includes(eachData.airline.toUpperCase())){
+                              //console.log("selectedAirlines", selectedAirlines)
                                 return (
                                     <tr key={eachData.airline}>
-                                        <td>{eachData.airline}</td>
+                                        <td>{eachData.airline.toUpperCase()}</td>
                                         {
                                             reviewsCategory.map((category, index) =>{
-                                                return <td key={index}>{eachData.categories[category]}</td>
-                                        })
+                                                return category === "overall" ? <td key={index}>{eachData.categories[category]} <span class="side-number">({eachData.total_reviews})</span> </td> :  <td key={index}>{generateStarRating(eachData.categories[category])}</td>
+                                          })
                                         }  
                                     </tr>        
                                 )

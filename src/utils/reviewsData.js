@@ -22,4 +22,4 @@ export const airlineReviewsData = [
 ];
 
 
-export const reviewsCategory = ["safety", "comfort", "service", "food", "cleanliness"];
+export const reviewsCategory = ["overall", "safety", "comfort", "service", "food", "cleanliness"];

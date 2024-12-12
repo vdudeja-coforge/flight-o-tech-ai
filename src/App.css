@@ -1,7 +1,57 @@
 .App {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   min-height: 100vh;
   background: #f0f4f8;
+}
+
+
+/* Styling for the number inside parentheses */
+.side-number {
+  font-size: 14px;  /* Smaller font for the number inside parentheses */
+  vertical-align: baseline;  /* Optional: aligns the smaller number properly */
+}
+
+tr>th, tr> td{
+  text-align: center;
+}
+
+.star-rating {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.star-rating .full {
+  color: gold;
+}
+
+.star-rating .half {
+  background: linear-gradient(90deg, gold 50%, #ddd 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.star-rating .empty {
+  color: #ddd;
+}
+
+.rating-stars{
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  object-fit: contain;
+  margin-right: 4px;
+}
+
+.tripadvisor-star{
+  color: #37B34A;
+}
+
+.airlinequality-star{
+  color: #FF7F50;
+}
+
+.trustpilot-star{
+  color: #003366 ;
 }

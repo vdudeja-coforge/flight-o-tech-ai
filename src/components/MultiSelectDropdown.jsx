@@ -8,6 +8,11 @@ const MultiSelectDropdown = ({ options, onSelectionChange }) => {
 
   const dropdownRef = useRef(null);
 
+  useEffect(()=>{
+    setSelectedOptions(options);
+    onSelectionChange(options);
+  }, [])
+
   // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {

@@ -1,0 +1,52 @@
+{
+	"reviews":[
+		{
+			"airline": "BRITISH AIRWAYS",
+			"total_reviews" : "12,395",
+			"categories": {
+				"overall": "1.5",
+				"safety": "2",
+				"comfort": "1",
+				"service": "1.5",
+				"food": "1.5",
+				"cleanliness": "1.0"
+			}
+		},
+		{
+			"airline": "Aer Lingus",
+			"total_reviews" : "22,435",
+			"categories": {
+				"overall": "1.5",
+				"safety": "1.5",
+				"comfort": "1.5",
+				"service": "1.5",
+				"food": "1",
+				"cleanliness": "2"
+			}
+		},
+		{
+			"airline": "Iberia",
+			"total_reviews" : "12,277",
+			"categories": {
+				"overall": "1.5",
+				"safety": "1.5",
+				"comfort": "1.5",
+				"service": "2",
+				"food": "1",
+				"cleanliness": "1"
+			}
+		},
+		{
+			"airline": "EasyJet",
+			"total_reviews" : "40,395",
+			"categories": {
+				"overall": "2.5",
+				"safety": "2.5",
+				"comfort": "2.5",
+				"service": "3",
+				"food": 2,
+				"cleanliness": "1.5"
+			}
+		}
+	]
+}
