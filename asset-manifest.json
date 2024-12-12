@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/flight-o-tech-ai/static/css/main.628db12b.css",
-    "main.js": "/flight-o-tech-ai/static/js/main.67c8dc16.js",
+    "main.css": "/flight-o-tech-ai/static/css/main.b758f0fc.css",
+    "main.js": "/flight-o-tech-ai/static/js/main.90563a6b.js",
     "static/js/453.2ec17513.chunk.js": "/flight-o-tech-ai/static/js/453.2ec17513.chunk.js",
     "static/media/airplane_1308-28461.png": "/flight-o-tech-ai/static/media/airplane_1308-28461.4baf6330a68313e9ba87.png",
+    "static/media/FlightotechLogo.JPG": "/flight-o-tech-ai/static/media/FlightotechLogo.17db840716ece9cf41c3.JPG",
+    "static/media/fontello.eot?21572634": "/flight-o-tech-ai/static/media/fontello.a1f2f612668835767d68.eot",
+    "static/media/fontello.ttf?21572634": "/flight-o-tech-ai/static/media/fontello.7cbb91abec72427acd26.ttf",
+    "static/media/fontello.woff?21572634": "/flight-o-tech-ai/static/media/fontello.e09155c2074d11fb3564.woff",
+    "static/media/fontello.woff2?21572634": "/flight-o-tech-ai/static/media/fontello.db75d92f756b0b9f4bb0.woff2",
+    "static/media/fontello.svg?21572634": "/flight-o-tech-ai/static/media/fontello.fe2872a285bc49c85d12.svg",
+    "static/media/star-empty-icon.svg": "/flight-o-tech-ai/static/media/star-empty-icon.0dc9d94c21f72497ff7cf3de0b752df0.svg",
+    "static/media/star-half-icon.svg": "/flight-o-tech-ai/static/media/star-half-icon.53bd58c4abf9de2ecc032d68b5f16730.svg",
     "index.html": "/flight-o-tech-ai/index.html",
-    "main.628db12b.css.map": "/flight-o-tech-ai/static/css/main.628db12b.css.map",
-    "main.67c8dc16.js.map": "/flight-o-tech-ai/static/js/main.67c8dc16.js.map",
+    "static/media/star-full-icon.svg": "/flight-o-tech-ai/static/media/star-full-icon.01513173e1ce7b8e89f80ed9d874b350.svg",
+    "main.b758f0fc.css.map": "/flight-o-tech-ai/static/css/main.b758f0fc.css.map",
+    "main.90563a6b.js.map": "/flight-o-tech-ai/static/js/main.90563a6b.js.map",
     "453.2ec17513.chunk.js.map": "/flight-o-tech-ai/static/js/453.2ec17513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.628db12b.css",
-    "static/js/main.67c8dc16.js"
+    "static/css/main.b758f0fc.css",
+    "static/js/main.90563a6b.js"
   ]
 }
