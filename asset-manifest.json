@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/flight-o-tech-ai/static/css/main.b758f0fc.css",
-    "main.js": "/flight-o-tech-ai/static/js/main.1acc048e.js",
+    "main.js": "/flight-o-tech-ai/static/js/main.110f8fcd.js",
     "static/js/453.2ec17513.chunk.js": "/flight-o-tech-ai/static/js/453.2ec17513.chunk.js",
     "static/media/airplane_1308-28461.png": "/flight-o-tech-ai/static/media/airplane_1308-28461.4baf6330a68313e9ba87.png",
     "static/media/FlightotechLogo.JPG": "/flight-o-tech-ai/static/media/FlightotechLogo.17db840716ece9cf41c3.JPG",
@@ -15,11 +15,11 @@
     "index.html": "/flight-o-tech-ai/index.html",
     "static/media/star-full-icon.svg": "/flight-o-tech-ai/static/media/star-full-icon.01513173e1ce7b8e89f80ed9d874b350.svg",
     "main.b758f0fc.css.map": "/flight-o-tech-ai/static/css/main.b758f0fc.css.map",
-    "main.1acc048e.js.map": "/flight-o-tech-ai/static/js/main.1acc048e.js.map",
+    "main.110f8fcd.js.map": "/flight-o-tech-ai/static/js/main.110f8fcd.js.map",
     "453.2ec17513.chunk.js.map": "/flight-o-tech-ai/static/js/453.2ec17513.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b758f0fc.css",
-    "static/js/main.1acc048e.js"
+    "static/js/main.110f8fcd.js"
   ]
 }
