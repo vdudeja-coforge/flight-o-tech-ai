@@ -3,9 +3,9 @@ import React from 'react';
 const AirlineComparisonChartView = () => {
     // Component logic and JSX here
     return (
-        <div>
-            <h2>Chart View</h2>
-        </div>
+            <div style={{display: "flex", justifyContent:"space-around", flexDirection:"column", paddingTop:"40px" }}>
+                <h2>Chart View Coming Soon...</h2>
+            </div> 
     );
 };
 
